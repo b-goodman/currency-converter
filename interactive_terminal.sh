@@ -6,7 +6,7 @@ DEFAULT_CURRENCY_CODE="USD";
 
 function enter_currency_param {
 	echo -n "Enter Currency Code (default: 'USD'): "
-	read ${CURRENCY_CODE:u}; : ${CURRENCY_CODE:=$DEFAULT_CURRENCY_CODE}
+	read CURRENCY_CODE; : ${CURRENCY_CODE:=$DEFAULT_CURRENCY_CODE}
 	get_rates $CURRENCY_CODE
 }
 
@@ -19,4 +19,4 @@ function get_rates {
 	printf "%s\n" $rates
 }
 
-enter_parameters
+enter_currency_param

@@ -22,8 +22,9 @@ function enter_currency_param {
 		then
 			echo "Please enter a valid currency code (https://www.exchangerate-api.com/docs/supported-currencies)"
 			enter_currency_param
+		else
+			get_rates $CURRENCY_CODE
 	fi
-	get_rates $CURRENCY_CODE
 }
 
 function get_rates {
